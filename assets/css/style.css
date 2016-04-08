@@ -5,7 +5,6 @@ header {
     background-position: center center;
     height: 700px;
     position: relative;
-
 }
 
 header::before {
@@ -20,8 +19,39 @@ header::before {
 
 section#what {
     background-color: #333333;
+    color: #ffffff;
 }
 
-section#what {
+section#contact {
     color: #ffffff;
+    background-color: #e9901e;
+}
+
+nav.ar-nav {
+    position: relative;
+}
+
+nav.ar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    position: absolute;
+    right: 0;
+    top: 20px;
+
+    z-index: 2;
+}
+
+nav.ar-nav ul > li{
+    display: inline-block;
+    margin: 20px;
+    color: #ffffff;
+}
+
+nav.ar-nav ul > li:hover{
+    display: inline-block;
+    margin: 20px;
+    color: #ffffff;
+    text-decoration: underline;
 }
