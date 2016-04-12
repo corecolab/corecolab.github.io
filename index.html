@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="" lang="pt" prefix="og: http://ogp.me/ns#">
+<html ng-app="corecolabApp" lang="pt" prefix="og: http://ogp.me/ns#">
 <head>
     <title></title>
     <!-- -->
@@ -49,77 +49,105 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1>WHO WE ARE</h1>
+                <h1 class="section-title text-center text-capitalize">WHO WE ARE</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto dolor doloremque eveniet inventore magni nemo nihil officiis, perferendis repellat reprehenderit, saepe totam vero voluptatibus voluptatum. Adipisci dolorem et repudiandae.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto dolor doloremque eveniet inventore magni nemo nihil officiis, perferendis repellat reprehenderit, saepe totam vero voluptatibus voluptatum. Adipisci dolorem et repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium asperiores aspernatur, consectetur consequuntur corporis dolore excepturi iusto laboriosam libero molestiae mollitia nobis, porro quaerat repellat sint soluta voluptas voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio porro possimus quae quis. Beatae consectetur dolores nihil quibusdam saepe. Distinctio est eum expedita ipsum maiores necessitatibus perferendis quia, reprehenderit tempora. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur distinctio dolor doloremque est ex nesciunt. A cum deleniti ducimus eligendi fugiat ipsa, ipsam labore minima natus neque quae voluptas voluptatibus!</p>
             </div>
         </div>
     </div>
 </section>
 
-<section id="what">
+<section id="what" ng-controller="ServicesController as sc">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="text-right">WHAT WE DO</h1>
+                <h1 class="section-title text-center text-capitalize">{{ sc.title }}</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias aliquam aut beatae consequatur, cupiditate dignissimos distinctio, eaque explicabo modi nisi nobis nulla quae quia, quis sapiente similique voluptatem voluptatibus!</p>
+                <div class="service-collection">
+                    <div class="service-cell" ng-repeat="service in sc.services">
+                        <div class="service-image"></div>
+                        <div class="service-content">
+                            <!--<div class="service-title">{{ service.name }}</div>-->
+                            <div class="service-description">{{ service.description }}</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="team">
+<section id="team" ng-controller="TeamController as tc">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1>OUR TEAM</h1>
+                <h1 class="section-title text-center text-capitalize">{{ tc.title }}</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto dolor doloremque eveniet inventore magni nemo nihil officiis, perferendis repellat reprehenderit, saepe totam vero voluptatibus voluptatum. Adipisci dolorem et repudiandae.</p>
+                <div class="profile-collection">
+                    <div class="profile-cell" ng-repeat="member in tc.members">
+                        <div class="profile-image"></div>
+                        <div class="profile-content">
+                            <div class="profile-name text-center">{{ member.name }}</div>
+                            <div class="profile-role text-center">{{ member.title }}</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="sitemap">
+<section id="portfolio"ng-controller="PortfolioController as pc">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
+                <h1 class="section-title text-center text-capitalize">{{ pc.title }}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="works-collection">
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 work-cell" ng-repeat="work in pc.works">
+                        <!--<div class="work-image" ng-style="'background-image: url(\'../images/office-wp.jpg\')'">-->
 
+                        <!--</div>-->
+                        <img ng-src="assets/images/{{work.img}}" alt="{{work.name}}">
+                    </div>
+                    <div class="col-xs-12">
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h1 class="text-right">DON'T BE SHY</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias aliquam aut beatae consequatur, cupiditate dignissimos distinctio, eaque explicabo modi nisi nobis nulla quae quia, quis sapiente similique voluptatem voluptatibus!</p>
-            </div>
-        </div>
-    </div>
-</section>
+<!--<section id="sitemap">-->
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <!--<div class="col-xs-12">-->
+
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
 
 <footer>
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                Copyright
+                <div class="copyright">
+                    &copy; 2016 | Designed by <b>RafaelFeroli</b>
+                </div>
             </div>
         </div>
     </div>

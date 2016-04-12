@@ -1,3 +1,12 @@
+section {
+    padding-bottom: 50px;
+}
+
+section .section-title {
+    padding: 60px 0 100px 0;
+    font-weight: 200;
+}
+
 header {
     background-image: url('../images/office-wp.jpg');
     -webkit-background-size: cover;
@@ -17,15 +26,17 @@ header::before {
     background-color: rgba(50, 20, 0, 0.6);
 }
 
-section#what {
-    background-color: #333333;
+footer {
+    background-color: #323232;
     color: #ffffff;
+    text-align: center;
 }
 
-section#contact {
-    color: #ffffff;
-    background-color: #e9901e;
+footer .copyright {
+    padding: 50px 0;
 }
+
+/* NAV */
 
 nav.ar-nav {
     position: relative;
@@ -54,4 +65,102 @@ nav.ar-nav ul > li:hover{
     margin: 20px;
     color: #ffffff;
     text-decoration: underline;
+}
+
+
+/* WHO WE ARE */
+section#who {
+    background-color: #F0F0F0;
+}
+
+/* WHAT WE DO */
+
+section#what {
+    background-color: #E6E6E6;
+}
+
+.service-collection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.service-collection .service-cell {
+    display: flex;
+    flex-direction: column;
+
+    flex-basis: 33%;
+
+    padding: 0 40px 100px 40px;
+}
+
+.service-collection .service-cell .service-image {
+    width: 200px;
+    height: 200px;
+    background-color: #e0e0e0;
+
+    align-self: center;
+}
+
+.service-collection .service-cell .service-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 20px 10px;
+}
+
+
+/* TEAM */
+section#team {
+    background-color: #C9C9C9;
+}
+
+.profile-collection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.profile-collection .profile-cell {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    padding: 0 40px 100px 40px;
+}
+
+.profile-collection .profile-cell .profile-image {
+    width: 200px;
+    height: 200px;
+    background-color: #e0e0e0;
+
+    display: flex;
+    align-self: center;
+}
+
+.profile-collection .profile-cell .profile-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+/* Portfolio */
+section#portfolio {
+    background-color: #B4B4B4;
+}
+
+.works-collection {
+
+}
+
+.works-collection .work-cell {
+    padding-bottom: 50px;
+}
+
+.works-collection .work-cell img {
+    width: 100%;
 }
