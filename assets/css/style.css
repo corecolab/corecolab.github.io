@@ -12,6 +12,7 @@ header {
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
+    min-height: 500px;
     height: 100vh;
     position: relative;
 }
@@ -80,20 +81,19 @@ section#what {
 }
 
 .service-collection {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
 
-    justify-content: center;
+    /*justify-content: center;*/
 }
 
 .service-collection .service-cell {
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    flex-basis: 33%;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*flex-shrink: 0;*/
 
-    padding: 0 40px 100px 40px;
+    padding: 0 40px 50px 40px;
 }
 
 .service-collection .service-cell .service-image {
@@ -101,14 +101,16 @@ section#what {
     height: 200px;
     background-color: #e0e0e0;
 
-    align-self: center;
+    margin: auto;
 }
 
 .service-collection .service-cell .service-content {
-    display: flex;
-    flex-wrap: wrap;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
 
-    padding: 20px 10px;
+    /*max-width: 300px;*/
+
+    padding: 20px 15px;
 }
 
 
