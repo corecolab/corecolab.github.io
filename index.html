@@ -29,8 +29,8 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
+        <div class="row center-xs">
+            <div class="col-xs-10">
                 <div class="box">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto dolor doloremque eveniet inventore magni nemo nihil officiis, perferendis repellat reprehenderit, saepe totam vero voluptatibus voluptatum. Adipisci dolorem et repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium asperiores aspernatur, consectetur consequuntur corporis dolore excepturi iusto laboriosam libero molestiae mollitia nobis, porro quaerat repellat sint soluta voluptas voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio porro possimus quae quis. Beatae consectetur dolores nihil quibusdam saepe. Distinctio est eum expedita ipsum maiores necessitatibus perferendis quia, reprehenderit tempora. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur distinctio dolor doloremque est ex nesciunt. A cum deleniti ducimus eligendi fugiat ipsa, ipsam labore minima natus neque quae voluptas voluptatibus!</p>
                 </div>
@@ -42,17 +42,23 @@
 <section id="what" class="lp-section" ng-controller="ServicesController as sc">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-sm-12">
                 <div class="box">
                     <h1 class="lp-section-title">{{ sc.title }}</h1>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="service in sc.services">
+        <div class="row around-xs">
+            <div class="col-xs-8 col-sm-5 col-md-4" ng-repeat="service in sc.services">
                 <div class="box">
                     <div class="service-cell">
-                        <div class="service-cell-img"></div>
+                        <div class="row around-xs">
+                            <div class="col-xs-7 col-sm-8 col-md-7">
+                                <div class="box">
+                                    <div class="service-cell-img"></div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="service-cell-details">
                             <p>{{ service.description }} </p>
                         </div>
@@ -66,17 +72,23 @@
 <section id="team" class="lp-section" ng-controller="TeamController as tc">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-sm-12">
                 <div class="box">
                     <h1 class="lp-section-title">{{ tc.title }}</h1>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="member in tc.members">
+        <div class="row around-xs">
+            <div class="col-xs-6 col-sm-5 col-md-3 col-lg-3" ng-repeat="member in tc.members">
                 <div class="box">
                     <div class="team-cell">
-                        <div class="team-cell-img"></div>
+                        <div class="row around-xs">
+                            <div class="col-xs-10">
+                                <div class="box">
+                                    <div class="team-cell-img"></div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="team-cell-details">
                             <div class="team-cell-name">{{ member.name }}</div>
                             <div class="team-cell-roel">{{ member.title }}</div>
@@ -97,8 +109,8 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3" ng-repeat="work in pc.works">
+        <div class="row around-xs">
+            <div class="col-xs-5 col-sm-5 col-md-4 col-lg-3" ng-repeat="work in pc.works">
                 <div class="box">
                     <div class="portfolio-cell">
                         <div class="portfolio-work-name">{{ work.name }}</div>
@@ -114,8 +126,10 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <div class="copyright">
-                    &copy; 2016 | Designed by <b>RafaelFeroli</b>
+                <div class="box">
+                    <div class="copyright">
+                        &copy; 2016 | Designed by <b>RafaelFeroli</b>
+                    </div>
                 </div>
             </div>
         </div>
