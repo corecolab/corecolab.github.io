@@ -50,10 +50,12 @@
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="service in sc.services">
-                <div class="service-cell">
-                    <div class="service-cell-img"></div>
-                    <div class="service-cell-details">
-                        <p>{{ service.description }} </p>
+                <div class="box">
+                    <div class="service-cell">
+                        <div class="service-cell-img"></div>
+                        <div class="service-cell-details">
+                            <p>{{ service.description }} </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -65,16 +67,20 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="lp-section-title">{{ tc.title }}</h1>
+                <div class="box">
+                    <h1 class="lp-section-title">{{ tc.title }}</h1>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="member in tc.members">
-                <div class="team-cell">
-                    <div class="team-cell-img"></div>
-                    <div class="team-cell-details">
-                        <div class="team-cell-name">{{ member.name }}</div>
-                        <div class="team-cell-roel">{{ member.title }}</div>
+                <div class="box">
+                    <div class="team-cell">
+                        <div class="team-cell-img"></div>
+                        <div class="team-cell-details">
+                            <div class="team-cell-name">{{ member.name }}</div>
+                            <div class="team-cell-roel">{{ member.title }}</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,14 +92,18 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="lp-section-title">{{ pc.title }}</h1>
+                <div class="box">
+                    <h1 class="lp-section-title">{{ pc.title }}</h1>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="work in pc.works">
-                <div class="portfolio-cell">
-                    <div class="portfolio-work-name">{{ work.name }}</div>
-                    <img ng-src="build/images/{{ work.img }}" alt="{{ work.name }}">
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3" ng-repeat="work in pc.works">
+                <div class="box">
+                    <div class="portfolio-cell">
+                        <div class="portfolio-work-name">{{ work.name }}</div>
+                        <img ng-src="build/images/{{ work.img }}" alt="{{ work.name }}">
+                    </div>
                 </div>
             </div>
         </div>
