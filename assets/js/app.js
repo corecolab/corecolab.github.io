@@ -79,7 +79,7 @@ app.controller('PortfolioController', function() {
         },
         {
             img: 'iconninenine.png',
-            name: 'Almost100'
+            name: 'NineNine'
         },
         {
             img: 'iconmaestro.png',
@@ -87,7 +87,7 @@ app.controller('PortfolioController', function() {
         },
         {
             img: 'iconninenine.png',
-            name: 'Almost100'
+            name: 'NineNine'
         },
         {
             img: 'iconmaestro.png',
@@ -99,11 +99,11 @@ app.controller('PortfolioController', function() {
         },
         {
             img: 'iconninenine.png',
-            name: 'Almost100'
+            name: 'NineNine'
         },
         {
             img: 'iconwhiteboard.png',
-            name: 'Almost100'
+            name: 'WhiteBoard'
         }
     ];
 });

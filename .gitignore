@@ -1,2 +1,9 @@
-.idea
 .DS_Store
+./idea
+./sass-cache
+./assets
+./node_modules
+.bowerrc
+bower.json
+Gruntfile.js
+package.json

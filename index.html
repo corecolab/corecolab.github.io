@@ -13,43 +13,20 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Begin Stylesheet -->
-    <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="assets/css/style.css"/>
-    <!-- END Stylesheet -->
+    <link rel="stylesheet" href="build/css/built.css"/>
 
-    <!-- BEGIN Head Scripts -->
-    <script type="text/javascript" src="assets/bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/bower_components/angular/angular.min.js"></script>
-
-    <!-- END Head Scripts -->
+    <script type="text/javascript" src="build/js/built.js"></script>
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <nav class="ar-nav">
-            <ul>
-                <li>WHO WE ARE</li>
-                <li>WHAT WE DO</li>
-                <li>OUR TEAM</li>
-                <li>CONTACT</li>
-            </ul>
-        </nav>
-        <div class="row">
-            <div class="col-xs-12">
-                <h1 style="color: #ffffff; padding-top: 200px">WE DO A LOT OF COOL STUFF YOU <br> WILL CERTAINLY LIKE</h1>
-            </div>
-        </div>
-    </div>
+<header id="lp-header">
 </header>
 
-<section id="who">
+<section id="who" class="lp-section">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="section-title text-center text-capitalize">WHO WE ARE</h1>
+                <h1 class="lp-section-title">WHO WE ARE</h1>
             </div>
         </div>
         <div class="row">
@@ -60,22 +37,19 @@
     </div>
 </section>
 
-<section id="what" ng-controller="ServicesController as sc">
+<section id="what" class="lp-section" ng-controller="ServicesController as sc">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="section-title text-center text-capitalize">{{ sc.title }}</h1>
+                <h1 class="lp-section-title">{{ sc.title }}</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12">
-                <div class="service-collection">
-                    <div class="col-xs-6 col-sm-6 col-md-4 service-cell" ng-repeat="service in sc.services">
-                        <div class="service-image"></div>
-                        <div class="service-content">
-                            <!--<div class="service-title">{{ service.name }}</div>-->
-                            <div class="service-description">{{ service.description }}</div>
-                        </div>
+            <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="service in sc.services">
+                <div class="service-cell">
+                    <div class="service-cell-img"></div>
+                    <div class="service-cell-details">
+                        <p>{{ service.description }} </p>
                     </div>
                 </div>
             </div>
@@ -83,22 +57,20 @@
     </div>
 </section>
 
-<section id="team" ng-controller="TeamController as tc">
+<section id="team" class="lp-section" ng-controller="TeamController as tc">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="section-title text-center text-capitalize">{{ tc.title }}</h1>
+                <h1 class="lp-section-title">{{ tc.title }}</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12">
-                <div class="profile-collection">
-                    <div class="profile-cell" ng-repeat="member in tc.members">
-                        <div class="profile-image"></div>
-                        <div class="profile-content">
-                            <div class="profile-name text-center">{{ member.name }}</div>
-                            <div class="profile-role text-center">{{ member.title }}</div>
-                        </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="member in tc.members">
+                <div class="team-cell">
+                    <div class="team-cell-img"></div>
+                    <div class="team-cell-details">
+                        <div class="team-cell-name">{{ member.name }}</div>
+                        <div class="team-cell-roel">{{ member.title }}</div>
                     </div>
                 </div>
             </div>
@@ -106,42 +78,25 @@
     </div>
 </section>
 
-<section id="portfolio"ng-controller="PortfolioController as pc">
+<section id="portfolio" class="lp-section" ng-controller="PortfolioController as pc">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="section-title text-center text-capitalize">{{ pc.title }}</h1>
+                <h1 class="lp-section-title">{{ pc.title }}</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12">
-                <div class="works-collection">
-                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 work-cell" ng-repeat="work in pc.works">
-                        <!--<div class="work-image" ng-style="'background-image: url(\'../images/office-wp.jpg\')'">-->
-
-                        <!--</div>-->
-                        <img ng-src="assets/images/{{work.img}}" alt="{{work.name}}">
-                    </div>
-                    <div class="col-xs-12">
-
-                    </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="work in pc.works">
+                <div class="portfolio-cell">
+                    <div class="portfolio-work-name">{{ work.name }}</div>
+                    <img ng-src="build/images/{{ work.img }}" alt="{{ work.name }}">
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!--<section id="sitemap">-->
-    <!--<div class="container">-->
-        <!--<div class="row">-->
-            <!--<div class="col-xs-12">-->
-
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</section>-->
-
-<footer>
+<footer id="lp-footer">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
@@ -152,7 +107,5 @@
         </div>
     </div>
 </footer>
-
-<script type="text/javascript" src="assets/js/app.js"></script>
 </body>
 </html>
