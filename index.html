@@ -85,7 +85,7 @@
                         <div class="row around-xs">
                             <div class="col-xs-10">
                                 <div class="box">
-                                    <div class="team-cell-img"></div>
+                                    <img ng-src="build/images/team/{{ member.img }}" class="team-cell-img" alt="">
                                 </div>
                             </div>
                         </div>
@@ -114,7 +114,7 @@
                 <div class="box">
                     <div class="portfolio-cell">
                         <div class="portfolio-work-name">{{ work.name }}</div>
-                        <img ng-src="build/images/{{ work.img }}" alt="{{ work.name }}">
+                        <img ng-src="build/images/portfolio/{{ work.img }}" alt="{{ work.name }}">
                     </div>
                 </div>
             </div>
