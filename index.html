@@ -32,7 +32,7 @@
 
 <section id="who" class="lp-section">
     <div class="container">
-        <div class="row">
+        <div class="row center-xs">
             <div class="col-xs-12">
                 <div class="box">
                     <h1 class="lp-section-title">WHO WE ARE</h1>
@@ -40,9 +40,10 @@
             </div>
         </div>
         <div class="row center-xs">
-            <div class="col-xs-10">
+            <div class="col-xs-10 col-lg-8">
                 <div class="box">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto dolor doloremque eveniet inventore magni nemo nihil officiis, perferendis repellat reprehenderit, saepe totam vero voluptatibus voluptatum. Adipisci dolorem et repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium asperiores aspernatur, consectetur consequuntur corporis dolore excepturi iusto laboriosam libero molestiae mollitia nobis, porro quaerat repellat sint soluta voluptas voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio porro possimus quae quis. Beatae consectetur dolores nihil quibusdam saepe. Distinctio est eum expedita ipsum maiores necessitatibus perferendis quia, reprehenderit tempora. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur distinctio dolor doloremque est ex nesciunt. A cum deleniti ducimus eligendi fugiat ipsa, ipsam labore minima natus neque quae voluptas voluptatibus!</p>
+                    <p>We are a group of people who are passionate about technology and who want to make your idea a reality, with a lot of focused, hard work.</p>
+                    <p>We want to build the best experience for your app, creating products that are simple, beautiful and efficient, and that deliver valuable results for your business.</p>
                 </div>
             </div>
         </div>
@@ -63,14 +64,21 @@
                 <div class="box">
                     <div class="service-cell">
                         <div class="row around-xs">
-                            <div class="col-xs-7 col-sm-8 col-md-7">
+                            <div class="col-xs-12">
                                 <div class="box">
                                     <div class="service-cell-img"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="service-cell-details">
-                            <p>{{ service.description }} </p>
+                        <div class="row around-xs">
+                            <div class="col-xs-12">
+                                <div class="box">
+                                    <div class="service-cell-details">
+                                        <h3>{{ service.name }}</h3>
+                                        <p>{{ service.description }} </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,7 +128,7 @@
             </div>
         </div>
         <div class="row around-xs">
-            <div class="col-xs-5 col-sm-5 col-md-4 col-lg-3" ng-repeat="work in pc.works">
+            <div class="col-xs-5 col-sm-5 col-md-4" ng-repeat="work in pc.works">
                 <div class="box">
                     <div class="portfolio-cell">
                         <div class="portfolio-work-name">{{ work.name }}</div>
