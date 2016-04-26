@@ -7,7 +7,7 @@
     <meta property="og:title" content="corecolab.co" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://corecolab.github.io" />
-    <meta property="og:image" content="build/images/logocorecolab.png" />
+    <meta property="og:image" content="build/images/bg.png" />
     <!-- END Open Graph Protocol -->
 
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
@@ -130,11 +130,31 @@
         <div class="row around-xs">
             <div class="col-xs-5 col-sm-5 col-md-4" ng-repeat="work in pc.works">
                 <div class="box">
-                    <div class="portfolio-cell">
-                        <div class="portfolio-work-name">{{ work.name }}</div>
-                        <img ng-src="build/images/portfolio/{{ work.img }}" alt="{{ work.name }}">
-                    </div>
+                    <a href="{{ work.appstore }}" target="_blank">
+                        <div class="portfolio-cell">
+                            <div class="portfolio-work-name">{{ work.name }}</div>
+                            <img ng-src="build/images/portfolio/{{ work.img }}" alt="{{ work.name }}">
+                        </div>
+                    </a>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <h3 class="contact-title">CONTACT US</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row center-xs">
+        <div class="col-xs-12">
+            <div class="box">
+                <a href="mailto: contact@corecolab.co">
+                    <div class="message-bubble">
+                        <img src="build/images/comments_filled.png" alt="Contact">
+                    </div>
+                </a>
             </div>
         </div>
     </div>
