@@ -20,12 +20,11 @@
 <header id="lp-header">
     <div class="container">
         <div class="row start-xs">
-            <div class="col-xs-6 col-sm-4 col-lg-3">
+            <div class="col-xs-6 col-sm-4 col-md-3 col-xs-offset-1">
                 <div class="box">
                     <img src="build/images/identity/LOGO-CORECOLAB-H.png" class="lp-logo" alt="corecolab.co">
                 </div>
             </div>
-            <div class="col-xs-1"></div>
         </div>
         <div class="row middle-xs promise">
             <div class="col-xs-12">
@@ -34,7 +33,16 @@
                 </div>
             </div>
         </div>
+        <div class="row center-xs">
+            <div class="col-xs-5 col-md-2">
+                <div class="box">
+                    <div class="chevron-down-box">
+                        <img src="build/images/icons/down.png" class="chevron-down" alt="scroll">
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 </header>
 
 <section id="who" class="lp-section">
@@ -134,16 +142,16 @@
                 </div>
             </div>
         </div>
-        <div class="row around-xs">
-            <div class="col-xs-5 col-sm-5 col-md-4" ng-repeat="work in pc.works">
+        <div class="row center-xs">
+            <div class="col-xs-5 col-sm-5 col-md-4 work-control" ng-repeat="work in pc.works">
                 <div class="box">
-                        <div class="portfolio-cell">
-                            <a href="{{ work.appstore }}" target="_blank">
-                                <div class="portfolio-work-name">{{ work.name }}</div>
-                                <img ng-src="build/images/portfolio/{{ work.img }}" alt="{{ work.name }}">
-                                <div class="portfolio-modal"></div>
-                            </a>
-                        </div>
+                    <div class="portfolio-cell">
+                        <a href="{{ work.appstore }}" target="_blank">
+                            <div class="portfolio-work-name">{{ work.name }}</div>
+                            <img ng-src="build/images/portfolio/{{ work.img }}" alt="{{ work.name }}">
+                            <div class="portfolio-modal"></div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -158,7 +166,7 @@
     <div class="row center-xs">
         <div class="col-xs-12">
             <div class="box">
-                <a href="mailto: contact@corecolab.co">
+                <a href="mailto: hello@corecolab.co">
                     <div class="message-bubble">
                         <img src="build/images/comments_filled.png" alt="Contact">
                     </div>
