@@ -176,6 +176,29 @@
     </div>
 </section>
 
+<section id="partners" class="lp-section" ng-controller="PartnersController as pc">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <h1 class="lp-section-title">
+                        PARTNERS
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="row center-xs">
+            <div class="col-xs-12 col-md-3" ng-repeat="partner in pc.partners">
+                <div class="box">
+                    <a ng-href="{{partner.link}}" target="_blank" class="partner-link">
+                        <img ng-src="build/images/partners/{{partner.img}}" alt="{{partner.name}}">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <footer id="lp-footer">
     <div class="container">
         <div class="row">
